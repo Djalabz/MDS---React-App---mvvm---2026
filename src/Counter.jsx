@@ -24,7 +24,7 @@ function Counter() {
     return (
         <>
             <button onClick={() => increment()}>+</button>
-            <p>Compte : { count }</p>
+            <p className="">Compte : { count }</p>
         </>
     )     
 }

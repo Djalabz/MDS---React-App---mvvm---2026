@@ -18,7 +18,8 @@ function App() {
       <nav>
         <Link to="/">Home</Link> |{" "}
         <Link to="/counter">Counter</Link> |{" "}
-        <Link to="/products">Products</Link>
+        <Link to="/products">Products</Link> |{" "}
+        <Link to="/form">Form</Link>
       </nav>
 
       {/* Routes */}
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
     </BrowserRouter>
   )
