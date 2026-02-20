@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react"
 
 // TODO : 
-// - Lorsque l'on clique sur un item cela nous emmène sur une page de type produit individuelle
-// - Pouvoir ajouter un produit à un panier 
-// - Sauvegarder ce panier en local storage ?
-// - Pouvoir rechercher un item dans la liste 
-// - Pouvoir filtrer les items selon la catégorie / le prix etc 
+// - Lorsque l'on clique sur un item cela nous emmène sur une page de type produit individuel
+// exemple de path dans le routeur - products/:id (vous pouvez recup in id dans les params useParams)
+// - Pouvoir ajouter un produit à un panier depuis la page individuelle
+// + Adapter les composants Tailwind
 
 
 function Products() {
@@ -22,7 +21,7 @@ function Products() {
         .catch(err => console.log(err))
     }, []) 
 
-    // 2 - Les opérations (focntions / méthodes)
+    // 2 - Les opérations (fonctions / méthodes)
     
 
     // 3 - La vue

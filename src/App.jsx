@@ -19,6 +19,7 @@ function App() {
         <Link to="/">Home</Link> |{" "}
         <Link to="/counter">Counter</Link> |{" "}
         <Link to="/products">Products</Link> |{" "}
+        <Link to="/todo">Todo</Link> |{" "}
         <Link to="/form">Form</Link>
       </nav>
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/todo" element={<Todo />} />
         <Route path="/form" element={<Form />} />
       </Routes>
     </BrowserRouter>
