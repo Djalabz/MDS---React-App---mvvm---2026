@@ -1,8 +1,8 @@
-import Counter from './Counter'
-import Products from './Products'
-import Form from './Form'
-import Home from './Home'
-import Todo from './Todo'
+import Counter from './eShop/Counter'
+import Products from './eShop/Products'
+import Form from './eShop/Form'
+import Home from './eShop/Home'
+import TodoView from './Views/TodoView'
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/todo" element={<Todo />} />
+        <Route path="/todo" element={<TodoView />} />
         <Route path="/form" element={<Form />} />
       </Routes>
     </BrowserRouter>
