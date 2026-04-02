@@ -5,6 +5,7 @@
 // On importe également les éléments nécessaires à la bonne gestion de nos states et autres opérations 
 import { useState } from "react"
 import { v4 as uuidv4 } from 'uuid'
+import Todo from "../Models/TodoModel"
 
 // Composant fonctionnel du ViewModel : retourne uniquement des states / opérations pas de JSX (ce sera la view)
 function useTodoViewModel() {
@@ -15,7 +16,7 @@ function useTodoViewModel() {
         // On vérifie que l'input ne soit pas vide 
         if (inputValue != "") {
             // On crée un objet pour notre todo
-            let newTodo = {
+            const newTodo = {
                 id: uuidv4(),
                 check: false, 
                 content: inputValue
@@ -31,14 +32,13 @@ function useTodoViewModel() {
         setTodos(todos.map((todo) => todo.id === id ? { ...todo, check: !todo.check } : todo))
     }
 
-
     return {
         inputValue, 
         todos,
         handleAddTodo,
         handleCheck, 
         setInputValue
-    };
+    }
 }
 
 export { useTodoViewModel } 
