@@ -7,7 +7,10 @@ import { useState } from "react"
 import { v4 as uuidv4 } from 'uuid'
 import Todo from "../Models/TodoModel"
 
+
 // Composant fonctionnel du ViewModel : retourne uniquement des states / opérations pas de JSX (ce sera la view)
+// NB : Le use ne se rettrouve pas systématiquement au niveau du nom du vm
+// NB 2 : Une classe peut aussi aussi préférable selon les cas
 function useTodoViewModel() {
     const [inputValue, setInputValue] = useState("")
     const [todos, setTodos] = useState([])
@@ -16,11 +19,16 @@ function useTodoViewModel() {
         // On vérifie que l'input ne soit pas vide 
         if (inputValue != "") {
             // On crée un objet pour notre todo
-            const newTodo = {
-                id: uuidv4(),
-                check: false, 
-                content: inputValue
-            }
+
+            // On va instancier le modèle afin de générer un nouvel objet Todo
+            const newTodo = new Todo(inputValue)
+
+            // const newTodo = {
+            //     id: uuidv4(),
+            //     check: false, 
+            //     content: inputValue
+            // }
+
             // Puis on l'ajoute à notre tableau de todos en faisant une copie au préalable
             setTodos([ ...todos, newTodo ])
         }

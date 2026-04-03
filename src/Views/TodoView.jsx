@@ -29,7 +29,7 @@ function TodoView() {
                 </div>
             ))}
         </>
-     );
+    );
 }
 
 // On exporte la vue arfin de l'importer dans App
